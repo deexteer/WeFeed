@@ -1,0 +1,38 @@
+.landing
+	&__container
+		background: url('../../images/landing-page-background.jpg')
+		background-size: cover
+		background-position: center
+		height: 100vh
+		position: relative
+
+	&__text
+		position: absolute
+		transform: translate(-50%, -50%)
+		left: 50%
+		top: 50%
+		color: $white
+		text-align: center
+
+		&-title
+			font-size: 4rem
+
+		&-subtitle
+
+	&__decoration
+
+		&-bar1
+			background-color: rgba(255, 255, 255, 0.3)
+			height: 8rem
+			width: 100%
+			clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 100%)
+			position: absolute
+			bottom: 0
+
+		&-bar2
+			background-color: $white
+			height: 6rem
+			width: 100%
+			clip-path: polygon(0% 90%, 100% 0%, 100% 100%, 0% 100%)
+			position: absolute
+			bottom: 0

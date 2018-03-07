@@ -1,0 +1,54 @@
+.header-flying
+	background-color: $color-grey
+	box-shadow: $shadow-light
+
+.header
+	position: fixed
+	height: 4rem
+	width: 100%
+	transition: $transition
+	z-index: 1
+
+
+	&__logo
+		margin: 0.5rem
+		height: 3rem
+
+	&__searchbar
+		border: none
+		border-radius: 12px
+		height: 3rem
+		width: 40rem
+		margin: 0.5rem
+		background: url("../../images/icons/search.png") no-repeat, $white
+		background-position: 0.75rem 0.75rem
+		background-size: 1.5rem
+		padding-left: 40px
+		transition: $transition
+
+		&:focus
+			background-position: 0.5rem 0.5rem
+			background-size: 2rem
+			padding-left: 50px
+
+	&__button
+		margin: 1rem
+		float: left
+		display: inline-block
+		padding: 0.5rem 1rem
+		border-radius: 12px
+		background-color: $white
+
+		& a
+			color: grey
+			text-decoration: none
+
+	&__user-is-connected
+		color: white
+		line-height: 4rem
+
+	&__icons
+		margin: 1rem
+
+		& img
+			height: 2rem
