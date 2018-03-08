@@ -13,14 +13,14 @@ if(isset($_POST['form_inscription'])) {
       if($mail1 == $mail2) {
         if(filter_var($mail1, FILTER_VALIDATE_EMAIL)) {
 
-          $reqmail = $bdd->prepare("SELECT * FROM members WHERE mail = ?");
+          $reqmail = $bdd->prepare("SELECT * FROM users WHERE mail = ?");
           $reqmail->execute(array($mail1));
           $mailexist = $reqmail->rowCount();
 
           if($mailexist == 0 ) {
             if($mdp1 == $mdp2) {
 
-              $inserttmbr = $bdd->prepare('INSERT INTO members(pseudo, mail, mdp/*, confirmkey*/) VALUES(?,?,?/*,?*/)');
+              $inserttmbr = $bdd->prepare('INSERT INTO users(pseudo, mail, mdp) VALUES(?,?,?)');
               $inserttmbr->bindParam(1, $pseudo);
               $inserttmbr->bindParam(2, $mail1);
 							$inserttmbr->bindParam(3, $mdp1);

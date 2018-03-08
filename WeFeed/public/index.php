@@ -1,9 +1,12 @@
 <?php
 session_start();
-// session_destroy();
 
-$_SESSION['id'] = 1;
-$_SESSION['name'] = "Thomas";
+// session_destroy();
+//
+// $_SESSION['id'] = 1;
+// $_SESSION['name'] = "Thomas";
+
+require "models/mdl.bdd.php";
 
 //Récupère le haut du document html, avec le head et donc les styles
 require "views/view.htmlheader.php";

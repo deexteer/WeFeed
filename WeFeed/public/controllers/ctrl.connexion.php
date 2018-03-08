@@ -7,12 +7,12 @@ if(isset($_POST['form_connexion'])) {
 
   if( !(count(array_filter($_POST))!=count($_POST))) {
 
-    $requser = $bdd->prepare("SELECT * FROM members WHERE mail = ? AND mdp = ?");
+    $requser = $bdd->prepare("SELECT * FROM users WHERE mail = ? AND mdp = ?");
     $requser->execute(array($mailconnect, $mdpconnect));
     $userexist = $requser->rowCount();
     if($userexist == 1) {
       $_SESSION = $requser->fetch();
-      header("Location: index.php?req=dashboard");
+      header("Location: index.php?req=connexion");
     } else {
       $message = "Mail ou Mot de passe incorrect";
     }

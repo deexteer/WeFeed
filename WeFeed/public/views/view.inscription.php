@@ -22,6 +22,7 @@
 			    <br />
 			    <input class="inscription__form-sub-button" type="submit" name="form_inscription" value="S'inscrire" />
 			    <br />
+				<?= $message ?>
 			    <p class="inscription__form-regconlinks"><a class="other" href="index.php?req=connexion">Déjà inscrit ? Connectez-vous !</a></p>
 
 			</form>

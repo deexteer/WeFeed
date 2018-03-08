@@ -17,7 +17,7 @@
 	<?php if (isset($_SESSION['id'])): ?>
 
 		<!-- Utilisateur connecté -->
-		<div class="header__user-is-connected  float-left">Connecté en tant que <?= $_SESSION['name'] ?></div>
+		<div class="header__user-is-connected  float-left">Connecté en tant que <?= $_SESSION['pseudo'] ?></div>
 		<div class="header__icons float-left"><a href="index.php?req=userhome" ><img src="app/images/icons/dashboard.png" alt="Icone dashboard" /></a></div>
 		<div class="header__icons  float-left"><a href="index.php?req=disconnect" ><img src="app/images/icons/logout.png" alt="Icone logout" /></a></div>
 
