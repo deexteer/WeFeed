@@ -27,7 +27,7 @@ if(isset($_POST['form_inscription'])) {
 
               $inserttmbr->execute();
 
-              header('Location: index.php?req=dashboard');
+              header('Location: connexion');
             } else {
               $message = "Vos mdp ne correspondent pas" ;
             }
@@ -49,5 +49,6 @@ if(isset($_POST['form_inscription'])) {
 }
 
 require "views/view.inscription.php";
+require 'views/view.footer.php';
 
 ?>

@@ -1,0 +1,67 @@
+.userhome
+	background: url("../../images/user-page-background.jpg")
+	background-size: cover
+	background-position: center
+	height: 100vh
+	width: 100vw
+	padding-top: 4rem
+
+.newsfeed
+
+	&__title
+		font-size: 1.2rem
+		margin: 0.5rem
+		text-align: center
+
+	&__preview
+		font-size: 1.2rem
+		margin: 0.5rem
+
+	&_column
+		float: left
+		background: #e2e4e6
+		border-radius: 3px
+		width: 270px
+		margin: 1rem 1rem
+		height: 100%
+		-webkit-box-sizing: border-box
+		box-sizing: border-box
+		display: inline-block
+		vertical-align: top
+		white-space: nowrap
+		padding: 0.5rem
+
+
+.article
+	margin: 1rem 0rem
+	background-color: $white
+	border-radius: 3px
+	cursor: pointer
+	overflow: hidden
+	transition: all .25s ease
+
+	& a
+		text-decoration: none
+
+	&__image
+		height: 150px
+		width: 100%
+
+	&__title
+		padding: 0.8rem
+		color: darkslategrey
+
+
+	&__preview
+		padding: 0.5rem
+		color: grey
+
+		& p
+			text-overflow: ellipsis
+			white-space: pre-wrap
+			overflow: hidden
+			height: 5rem
+			display: inline-block
+			word-wrap: break-word
+			text-align: justify
+			padding: 0.2rem

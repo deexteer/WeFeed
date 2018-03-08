@@ -1,11 +1,13 @@
 <?php
-session_start();
+session_start(); // ????
 
 // session_destroy();
 //
 // $_SESSION['id'] = 1;
 // $_SESSION['name'] = "Thomas";
 
+require "config/config.php"; // ======= Abdellah SAQ - Ajout du fichier config.php
+require "helpers/session_helper.php"; // ======= Abdellah SAQ - Ajout du fichier helper.php
 require "models/mdl.bdd.php";
 
 //Récupère le haut du document html, avec le head et donc les styles
@@ -26,22 +28,23 @@ if (isset($_SESSION['id'])) {
 				break;
 
 			case 'connexion':
-				header('Location: index.php?req=userhome');
+				header('Location: userhome');
 				exit;
 				break;
 
 			case 'inscription':
 				require "controllers/ctrl.inscription.php";
-				break;session_destroy();
+				break;
+				session_destroy();
 
 			case 'disconnect':
 				session_destroy();
-				header('Location: index.php');
+				header('Location: inscription'); // ======= Abdellah SAQ - Modification lien - A modifier selon choix
 				exit;
 				break;
 
 			default:
-				header('Location: index.php?req=userhome');
+				header('Location: userhome'); // ======= Abdellah SAQ - Modification lien
 				exit;
 				break;
 		}
@@ -49,7 +52,7 @@ if (isset($_SESSION['id'])) {
 	} else {
 
 		/* Si l'utilisateur est connecté mais qu'il n'y a pas de paramètre get */
-		header('Location: index.php?req=publicuser');
+		header('Location: publicuser');
 		exit;
 	}
 
@@ -77,7 +80,7 @@ if (isset($_SESSION['id'])) {
 				break;
 
 			default:
-				header('Location: index.php?req=publichome');
+				header('Location: publichome'); // ======= Abdellah SAQ - Modification lien
 				exit;
 				break;
 		}
@@ -85,7 +88,7 @@ if (isset($_SESSION['id'])) {
 	} else {
 
 		/* Si l'utilisateur n'est pas connecté et qu'il n'existe pas de paramètre get */
-		header('Location: index.php?req=publicuser');
+		header('Location: publicuser'); // ======= Abdellah SAQ - Modification lien
 		exit;
 	}
 }
