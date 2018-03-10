@@ -1,0 +1,57 @@
+.settings
+	background: url("../../images/settings-page-background.jpg")
+	background-size: cover
+	background-position: center
+	height: 100vh
+	width: 100%
+	padding: 12rem
+
+.panel
+	background-color: $white
+	height: auto
+	width: 100%
+	border-radius: 3px
+	box-shadow: $shadow
+	@include clearfix
+
+	&__header
+		width: 100%
+		height: auto
+		text-align: center
+
+		& h1
+			padding: 5rem
+			color: $color-grey-dark
+
+	&__right-side
+		background-color: grey
+		float: left
+		width: 50%
+		height: 30rem
+
+	&__left-side
+		float: left
+		width: 50%
+		height: 30rem
+		background-color: grey
+
+	&__footer
+		float: left
+		width: 100%
+		height: auto
+		text-align: center
+
+		&-submit
+			cursor: pointer
+			margin: 1rem
+			border: none
+			display: inline-block
+			padding: 0.5rem 1rem
+			border-radius: 12px
+			background: linear-gradient(66deg, #0161BC, #33E0CC)
+			color: #ffffffff
+			font-size: 1.3rem
+			transition: all 0.3s ease
+			&:hover
+				transform: scale(1.1)
+				box-shadow: $shadow-light

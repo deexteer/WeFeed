@@ -55,7 +55,7 @@ html {
     width: calc(3 * ((100% - 3 * 6rem) /4) + 2 * 6rem); }
 
 .header-flying {
-  background-color: #e7e7e7;
+  background-color: #676767;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
 
 .header {
@@ -69,7 +69,7 @@ html {
     height: 3rem; }
   .header__searchbar {
     border: none;
-    border-radius: 12px;
+    border-radius: 3px;
     height: 3rem;
     width: 40rem;
     margin: 0.5rem;
@@ -142,7 +142,7 @@ html {
 
 .connexion__container, .inscription__container {
   height: 100vh;
-  width: 100vw; }
+  width: 100%; }
 .connexion__form, .inscription__form {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -155,7 +155,7 @@ html {
   .connexion__form-title, .inscription__form-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #9e9e9e; }
+    color: #676767; }
   .connexion__form-inputs, .inscription__form-inputs {
     background-color: #ffffffff;
     width: 20rem;
@@ -193,7 +193,7 @@ html {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding-top: 4rem; }
 
 .newsfeed__title {
@@ -244,6 +244,61 @@ html {
       word-wrap: break-word;
       text-align: justify;
       padding: 0.2rem; }
+
+.settings {
+  background: url("../../images/settings-page-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  padding: 12rem; }
+
+.panel {
+  background-color: #ffffffff;
+  height: auto;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
+  .panel::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .panel__header {
+    width: 100%;
+    height: auto;
+    text-align: center; }
+    .panel__header h1 {
+      padding: 5rem;
+      color: #676767; }
+  .panel__right-side {
+    background-color: grey;
+    float: left;
+    width: 50%;
+    height: 30rem; }
+  .panel__left-side {
+    float: left;
+    width: 50%;
+    height: 30rem;
+    background-color: grey; }
+  .panel__footer {
+    float: left;
+    width: 100%;
+    height: auto;
+    text-align: center; }
+    .panel__footer-submit {
+      cursor: pointer;
+      margin: 1rem;
+      border: none;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      background: linear-gradient(66deg, #0161BC, #33E0CC);
+      color: #ffffffff;
+      font-size: 1.3rem;
+      transition: all 0.3s ease; }
+      .panel__footer-submit:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
 
 .col-1-of-2 {
   background-color: grey; }

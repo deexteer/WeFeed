@@ -35,16 +35,19 @@ if (isset($_SESSION['id'])) {
 			case 'inscription':
 				require "controllers/ctrl.inscription.php";
 				break;
-				session_destroy();
+
+			case 'settings':
+				require "controllers/ctrl.settings.php";
+				break;
 
 			case 'disconnect':
 				session_destroy();
-				header('Location: inscription'); // ======= Abdellah SAQ - Modification lien - A modifier selon choix
+				header('Location: inscription');
 				exit;
 				break;
 
 			default:
-				header('Location: userhome'); // ======= Abdellah SAQ - Modification lien
+				header('Location: userhome');
 				exit;
 				break;
 		}

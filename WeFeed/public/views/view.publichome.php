@@ -1,17 +1,17 @@
-	<main>
-		<div class="landing__container">
-			<div class="landing__text">
-				<?php echo flash('login_success'); ?>
-				<div class="landing__text-title"><h1>WeFeed</h1></div>
-				<div class="landing__text-subtitle"><p>Arrêtez de gâcher du papier</p></div>
+<main>
+	<div class="landing__container">
+		<div class="landing__text">
+			<?php echo flash('login_success'); ?>
+			<div class="landing__text-title"><h1>WeFeed</h1></div>
+			<div class="landing__text-subtitle"><p>Arrêtez de gâcher du papier</p></div>
 
-			</div>
-			<div class="landing__decoration-bar1">
+		</div>
+		<div class="landing__decoration-bar1">
 
-			</div>
-			<div class="landing__decoration-bar2">
+		</div>
+		<div class="landing__decoration-bar2">
 
-			</div>
+		</div>
 		</div>
 		<section class="homepage__articles">
 			<div class="heading-text">

@@ -17,14 +17,27 @@
 
 		<!-- Utilisateur connecté -->
 		<div class="header__user-is-connected  float-left">Connecté en tant que <?= $_SESSION['pseudo'] ?></div>
-		<div class="header__icons float-left"><a href="userhome" ><img src="app/images/icons/dashboard.png" alt="Icone dashboard" /></a></div><!-- ======= Abdellah SAQ - Modification lien  -->
-		<div class="header__icons  float-left"><a href="disconnect" ><img src="app/images/icons/logout.png" alt="Icone logout" /></a></div><!-- ======= Abdellah SAQ - Modification lien  -->
+
+		<?php if($_GET['req'] == "publichome"): ?>
+			<div class="header__icons float-left"><a href="userhome" ><img src="app/images/icons/dashboard.png" alt="Icone dashboard" /></a></div>
+		<?php endif ?>
+
+		<?php if($_GET['req'] == "userhome"): ?>
+			<div class="header__icons float-left"><a href="publichome" ><img src="app/images/icons/home.png" alt="Icone home" /></a></div>
+			<div class="header__icons float-left"><a href="settings" ><img src="app/images/icons/settings.png" alt="Icone settings" /></a></div>
+		<?php endif ?>
+
+		<?php if($_GET['req'] == "settings"): ?>
+			<div class="header__icons float-left"><a href="userhome" ><img src="app/images/icons/dashboard.png" alt="Icone dashboard" /></a></div>
+		<?php endif ?>
+
+		<div class="header__icons  float-left"><a href="disconnect" ><img src="app/images/icons/logout.png" alt="Icone logout" /></a></div>
 
 	<?php else: ?>
 
 		<!-- Utilisateur non connecté -->
-		<div class="header__button"><a href="connexion">Se connecter</a></div>  <!-- ======= Abdellah SAQ - Modification lien  -->
-		<div class="header__button"><a href="inscription">S'inscrire</a></div><!-- ======= Abdellah SAQ - Modification lien  -->
+		<div class="header__button"><a href="connexion">Se connecter</a></div>
+		<div class="header__button"><a href="inscription">S'inscrire</a></div>
 
 	<?php endif ?>
 	</div>
