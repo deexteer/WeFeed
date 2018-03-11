@@ -1,16 +1,21 @@
-// On parcours le tableau avec la boucle for
-// et on récupère le titre de l'api et son url
-for(var j = 0; j < all_apis.length; j++) {
-	j = j.toString();
-	var api_title = all_apis[j].api_name;
-	var api_url = all_apis[j].api_url;
-
-	// On appelle la fonction qui va nous permettre de faire une requête ajax
-	getApiResult(j, api_title, api_url);
+if(user_apis == 0){
+	$('.newsfeed_container').html('<div class="news__feed-message">Vous n\'avez pas encore ajouté de feed dans votre tableau de bord ... :( Allez vite dans les paramètres pour changer cela !)</div>');
 }
 
+for (value of user_apis) {
+	$('.ok').html("ok")
+	console.log(value)
+}
 
-function getApiResult(number, api_title, api_url){
+for(var j = 0; j < user_apis.length; j++) {
+	for(var i = 0; i < all_apis.length; i++) {
+		if(user_apis[j] == all_apis[i].api_name){
+			createFeeds(j, all_apis[i].api_name, all_apis[i].api_url)
+		}
+	}
+}
+
+function createFeeds(number, api_title, api_url){
 
 	$('.newsfeed_container').append("<div class='newsfeed_column'><div class='newsfeed__title'>"+api_title+"</div><div class='news newsfeed_umber"+number+"'></div></div>");
 	var ajax = new XMLHttpRequest();

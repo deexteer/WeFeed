@@ -1,6 +1,3 @@
-<script>
-    var all_apis = <?php echo json_encode($result, JSON_HEX_TAG); ?>;
-</script>
 <div class="userhome">
 	<div class="newsfeed_container">
 		<!-- Il n'y a pas de contenu ici puisqu'il est géné avec le js -->

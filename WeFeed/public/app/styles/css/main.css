@@ -190,11 +190,16 @@ html {
 
 .userhome {
   background: url("../../images/user-page-background.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: auto;
   width: 100%;
   padding-top: 4rem; }
+  .userhome::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .newsfeed__title {
   font-size: 1.2rem;
@@ -207,9 +212,8 @@ html {
   float: left;
   background: #e2e4e6;
   border-radius: 3px;
-  width: 270px;
+  width: 300px;
   margin: 1rem 1rem;
-  height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
@@ -223,7 +227,8 @@ html {
   border-radius: 3px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.25s ease; }
+  transition: all 0.25s ease;
+  text-overflow: ellipsis; }
   .article a {
     text-decoration: none; }
   .article__image {

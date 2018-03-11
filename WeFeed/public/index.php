@@ -1,13 +1,8 @@
 <?php
-session_start(); // ????
+session_start();
 
-// session_destroy();
-//
-// $_SESSION['id'] = 1;
-// $_SESSION['name'] = "Thomas";
-
-require "config/config.php"; // ======= Abdellah SAQ - Ajout du fichier config.php
-require "helpers/session_helper.php"; // ======= Abdellah SAQ - Ajout du fichier helper.php
+require "config/config.php";
+require "helpers/session_helper.php";
 require "models/mdl.bdd.php";
 
 //Récupère le haut du document html, avec le head et donc les styles

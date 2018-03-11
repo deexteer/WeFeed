@@ -1,25 +1,27 @@
-<script>
-    var all_apis = <?php echo json_encode($result, JSON_HEX_TAG); ?>;
-</script>
+<?php
+
+
+?>
+
 <div class="settings">
 	<div class="panel">
+
 		<div class="panel__header">
 			<h1>Paramètres</h1>
 		</div>
-		<form class="" action="index.html" method="post">
+
+		<form class="panel__form" action="userhome" method="post">
+			<div class="ok">
+
+			</div>
 			<div class="panel__left-side">
-				<div class="panel__draggable">
-					Le monde
-				</div>
-				<div class="panel__draggable">
-					Le parisien
-				</div>
-				<div class="panel__draggable">
-					lorem
-				</div>
-				<div class="panel__draggable">
-					lorem
-				</div>
+				<select class="panel__api-selector" name="api">
+					<option value=""></option>
+					<?php foreach ($result as $key => $value) {
+						echo "<option id=".$value['api_id'].">".$value['api_name']."</option>";
+					} ?>
+
+				</select>
 			</div>
 			<div class="panel__right-side">
 				lorem
@@ -30,5 +32,14 @@
 		</form>
 
 	</div>
-
 </div>
+
+
+
+
+<!-- Category -->
+<!--
+Sport
+Politique
+General
+-->
