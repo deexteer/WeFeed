@@ -9,10 +9,11 @@
 .panel
 	background-color: $white
 	height: auto
-	width: 100%
+	width: 50rem
 	border-radius: 3px
 	box-shadow: $shadow
 	@include clearfix
+	margin: 0 auto
 
 	&__header
 		width: 100%
@@ -20,38 +21,29 @@
 		text-align: center
 
 		& h1
-			padding: 5rem
+			padding: 2rem
 			color: $color-grey-dark
 
-	&__right-side
-		background-color: grey
+	&__right-side, &__left-side
 		float: left
 		width: 50%
-		height: 30rem
+		height: 15rem
+		text-align: center
 
 	&__left-side
-		float: left
-		width: 50%
-		height: 30rem
-		background-color: grey
+		border-right: 1px solid grey
+
+	&__input
+		height: 2rem
+		width: 14rem
+		border-radius: 6px
+		border: none
+		margin: 2rem
+		box-shadow: $shadow-light
+		padding-left: 1rem
 
 	&__footer
 		float: left
 		width: 100%
 		height: auto
 		text-align: center
-
-		&-submit
-			cursor: pointer
-			margin: 1rem
-			border: none
-			display: inline-block
-			padding: 0.5rem 1rem
-			border-radius: 12px
-			background: linear-gradient(66deg, #0161BC, #33E0CC)
-			color: #ffffffff
-			font-size: 1.3rem
-			transition: all 0.3s ease
-			&:hover
-				transform: scale(1.1)
-				box-shadow: $shadow-light

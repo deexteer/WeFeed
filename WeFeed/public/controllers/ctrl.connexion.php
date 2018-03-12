@@ -22,5 +22,3 @@ if(isset($_POST['form_connexion'])) {
 
 require "views/view.connexion.php";
 require 'views/view.footer.php';
-
-?>

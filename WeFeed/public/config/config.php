@@ -1,5 +1,4 @@
 <?php
-    // ======= Abdellah SAQ - Constantes à utiliser à travers le site
 
     // DB Params
     define('DB_HOST', 'localhost');
@@ -18,5 +17,3 @@
 
     // App version
     define('APPVERSION', '1.0.0');
-
-?>

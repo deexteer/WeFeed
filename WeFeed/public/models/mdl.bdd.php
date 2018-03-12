@@ -8,11 +8,9 @@ try {
   die("<p> La connexion a échoué.</p>");
 }
 
-function changeData ($bdd, $tableToChange, $columnToSet, $dataToChange){
+function changeData($bdd, $tableToChange, $columnToSet, $dataToChange){
   $changedata = $bdd->prepare('UPDATE '.$tableToChange.' SET '.$columnToSet.' = ? WHERE id = ?');
   $changedata->bindParam(1, $dataToChange);
   $changedata->bindParam(2, $_SESSION['id']);
   $changedata->execute();
 }
-
-?>

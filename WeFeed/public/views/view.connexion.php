@@ -14,7 +14,7 @@
 				<br />
 				<input class="connexion__form-inputs" type="password" id="mdpconnect" name="mdpconnect" placeholder="Mot de passe" >
 				<br />
-				<input class="connexion__form-sub-button" type="submit" name="form_connexion" value="Se connecter" />
+				<input class="btn" type="submit" name="form_connexion" value="Se connecter" />
 				<br />
 				<?php if(isset($_POST['form_connexion'])) { echo $message; } ?>
 				<p class="connexion__form-regconlinks"><a class="other" href="inscription">Pas de compte ? Inscrivez-vous !</a></p>

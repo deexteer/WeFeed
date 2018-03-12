@@ -19,7 +19,7 @@
 			    <br />
 			    <input class="inscription__form-inputs" type="password" id="mdp2" name="mdp2" placeholder="Confirmez votre mot de passe" />
 			    <br />
-			    <input class="inscription__form-sub-button" type="submit" name="form_inscription" value="S'inscrire" />
+			    <input class="btn" type="submit" name="form_inscription" value="S'inscrire" />
 			    <br />
 				<?php if(isset($_POST['form_inscription'])) { echo $message; } ?>
 			    <p class="inscription__form-regconlinks"><a class="other" href="connexion">Déjà inscrit ? Connectez-vous !</a></p>

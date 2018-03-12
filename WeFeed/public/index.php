@@ -4,6 +4,10 @@ session_start();
 require "config/config.php";
 require "helpers/session_helper.php";
 require "models/mdl.bdd.php";
+require "models/mdl.apis.php";
+require "models/mdl.userapis.php";
+
+require "app/lang/lang.php";
 
 //Récupère le haut du document html, avec le head et donc les styles
 require "views/view.htmlheader.php";
@@ -33,6 +37,10 @@ if (isset($_SESSION['id'])) {
 
 			case 'settings':
 				require "controllers/ctrl.settings.php";
+				break;
+
+			case 'search':
+				require "controllers/ctrl.search.php";
 				break;
 
 			case 'disconnect':
@@ -78,7 +86,7 @@ if (isset($_SESSION['id'])) {
 				break;
 
 			default:
-				header('Location: publichome'); // ======= Abdellah SAQ - Modification lien
+				header('Location: publichome');
 				exit;
 				break;
 		}
@@ -86,7 +94,7 @@ if (isset($_SESSION['id'])) {
 	} else {
 
 		/* Si l'utilisateur n'est pas connecté et qu'il n'existe pas de paramètre get */
-		header('Location: publicuser'); // ======= Abdellah SAQ - Modification lien
+		header('Location: publicuser');
 		exit;
 	}
 }

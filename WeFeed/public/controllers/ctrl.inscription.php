@@ -46,5 +46,3 @@ if(isset($_POST['form_inscription'])) {
 
 require "views/view.inscription.php";
 require 'views/view.footer.php';
-
-?>
