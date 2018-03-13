@@ -77,3 +77,16 @@ echo "
 	var user_apis = ".json_encode($user_apis)."
 </script>
 ";
+
+$user_apis = array();
+$getuserapi = $bdd->prepare("SELECT api_numbers FROM users WHERE id = ?");
+$getuserapi->bindParam(1, $_SESSION['id']);
+$getuserapi->execute();
+$gettedapis = $getuserapi->fetch();
+$gettedapis = unserialize($gettedapis[0]);
+
+echo "
+<script>
+	var user_articles = ".json_encode($user_apis)."
+</script>
+";

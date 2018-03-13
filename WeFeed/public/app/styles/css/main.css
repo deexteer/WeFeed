@@ -391,6 +391,9 @@ html {
     content: "";
     display: table;
     clear: both; }
+  .search h1 {
+    text-align: center;
+    color: white; }
 
 #searchbar {
   width: 60%;

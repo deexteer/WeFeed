@@ -10,4 +10,12 @@ echo "
 </script>
 ";
 
+if(isset($_POST["search"])){
+	echo "
+	<script>
+		var search_request = '".$_POST["search"]."'
+	</script>
+	";
+}
+
 ?>

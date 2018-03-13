@@ -9,15 +9,15 @@
 			</div>
 			<?php echo flash('register_success'); ?>
 			<form method="POST" action="index.php?req=connexion">
-				<div class="connexion__form-title">Connexion</div>
-				<input class="connexion__form-inputs" type="email" id="mailconnect" name="mailconnect" placeholder="Votre mail" />
+				<div class="connexion__form-title"><?= CONNEXION_TITLE ?></div>
+				<input class="connexion__form-inputs" type="email" id="mailconnect" name="mailconnect" placeholder="<?= CON_MAIL_INPUT ?>" />
 				<br />
-				<input class="connexion__form-inputs" type="password" id="mdpconnect" name="mdpconnect" placeholder="Mot de passe" >
+				<input class="connexion__form-inputs" type="password" id="mdpconnect" name="mdpconnect" placeholder="<?= CON_PASSWORD_INPUT ?>" >
 				<br />
-				<input class="btn" type="submit" name="form_connexion" value="Se connecter" />
+				<input class="btn" type="submit" name="form_connexion" value="<?= CONNECT_BUTTON ?>" />
 				<br />
 				<?php if(isset($_POST['form_connexion'])) { echo $message; } ?>
-				<p class="connexion__form-regconlinks"><a class="other" href="inscription">Pas de compte ? Inscrivez-vous !</a></p>
+				<p class="connexion__form-regconlinks"><a class="other" href="inscription"><?= INSCRIPTION_PAGE_REDIRECTION ?></a></p>
 			</form>
 		</div>
 

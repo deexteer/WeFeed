@@ -2,12 +2,12 @@
 	<div class="panel">
 
 		<div class="panel__header">
-			<h1>Paramètres</h1>
+			<h1><?= SETTINGS_TITLE ?></h1>
 		</div>
 
 		<form class="panel__form" action="userhome" method="post">
 			<div class="panel__left-side">
-				<p>Ajouter des sources :</p>
+				<p><?= ADD_SOURCES_SELECT ?></p>
 				<select class="panel__input" name="api">
 					<option value=""></option>
 					<?php print_r($result) ?>
@@ -18,13 +18,13 @@
 				</select>
 			</div>
 			<div class="panel__right-side">
-				<label for="">Changer de pseudo :</label><br/>
+				<label for=""><?= CHANGE_PSEUDO ?></label><br/>
 				<input class="panel__input" type="text" name="pseudo" value=<?= $_SESSION['pseudo'] ?>><br/>
-				<label for="">Changer de mail :</label><br/>
+				<label for=""><?= CHANGE_MAIL ?></label><br/>
 				<input class="panel__input" type="text" name="mail" value=<?= $_SESSION['mail'] ?>><br/>
 			</div>
 			<div class="panel__footer">
-				<input class="btn" type="submit" name="form_settings" value="Valider">
+				<input class="btn" type="submit" name="form_settings" value="<?= VALIDATE_BUTTON_SETTINGS ?>">
 			</div>
 		</form>
 

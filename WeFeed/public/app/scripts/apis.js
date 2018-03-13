@@ -23,8 +23,12 @@ for(var j = 0; j < user_apis.length; j++) {
 function createFeeds(number, api_title, api_url){
 
 	$('.newsfeed_container').append("<div class='newsfeed_column' id='"+api_title+"'><div class='newsfeed__header'><div class='newsfeed__title'>"+api_title+"</div><div class='newsfeed__delete-button'></div></div><div class='news newsfeed_number"+number+"'></div></div>");
-	var ajax = new XMLHttpRequest();
 
+	makeArequest(api_url, number)
+}
+
+function makeArequest(api_url, number){
+	var ajax = new XMLHttpRequest();
 	ajax.open("GET", api_url, true);
 	ajax.send();
 	ajax.onreadystatechange = function() {
@@ -33,6 +37,7 @@ function createFeeds(number, api_title, api_url){
 			var parsedJson = JSON.parse(data);
 			var articles = parsedJson.articles;
 			for(var i = 0 ; i<= articles.length; i++) {
+
 				number = number.toString();
 				$('.newsfeed_number'+number).append("<div class='article'><a target='_blank' href="+articles[i].url+"><img src='"+articles[i].urlToImage+"' width='100%'><div class='article__title'><p>"+articles[i].title+"</p></div><div class='article__preview'><p>"+articles[i].description+"</p></div></a><div class='article__actions'><div class='article__button-like'></div><div class='article__button-fav'></div></div></div>");
 			}
@@ -74,3 +79,25 @@ $('.newsfeed__delete-button').click(function(){
 $(document).on('click',".language-selector",function () {
 
 });
+
+
+if(search_request == 0){
+	$('.newsfeed_container').html('<div class="news__feed-message">Vous n\'avez pas encore ajouté de feed dans votre tableau de bord ... :( Allez vite dans les paramètres pour changer cela !)</div>');
+} else {
+	search_url = "https://newsapi.org/v2/everything?q="+search_request+"&apiKey=83644cf8558f42ea8a7c94bd4385dbbe"
+	var ajax = new XMLHttpRequest();
+	ajax.open("GET", search_url, true);
+	ajax.send();
+	ajax.onreadystatechange = function() {
+		if (ajax.readyState == 4 && ajax.status == 200) {
+			var data = ajax.responseText;
+			var parsedJson = JSON.parse(data);
+			var articles = parsedJson.articles;
+			console.log(articles)
+			for(var i = 0 ; i<= articles.length; i++) {
+				
+				$('.search_results').append("<div class='results'>"+articles[i].title+"</div>");
+			}
+		}
+	}
+}
