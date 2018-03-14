@@ -10,6 +10,7 @@
 	//Début publichome (français)
     define('PUBLICHOME_SUBTITLE', 'Arrêtez de gâcher du papier');
     define('PUBLICHOME_MOST_POPULAR', 'LES PLUS POPULAIRES');
+    define('PUBLICHOME_MOST_LIKED', 'LES PLUS LIKEZ');
     //Fin publichome (français)
 
 	//Début connexion (français)

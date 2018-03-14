@@ -10,6 +10,7 @@
 	//Début publichome (anglais)
     define('PUBLICHOME_SUBTITLE', 'Stop wasting paper');
     define('PUBLICHOME_MOST_POPULAR', 'MOST POPULAR');
+    define('PUBLICHOME_MOST_LIKED', 'MOST LIKED');
     //Fin publichome (anglais)
 
 	//Début connexion (anglais)
