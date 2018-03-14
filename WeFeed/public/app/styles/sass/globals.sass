@@ -41,7 +41,7 @@ $transition: all .3s ease
 //GRID
 $grid-width: 114rem
 $gutter-vertical: 8rem
-$gutter-horizontal: 6rem
+$gutter-horizontal: 1rem
 
 //MIXINS
 @mixin clearfix
@@ -77,3 +77,21 @@ $gutter-horizontal: 6rem
 	&:hover
 		transform: scale(1.1)
 		box-shadow: $shadow-light
+
+.floating
+	animation: floating 4s infinite
+	position: relative
+	z-index: 10
+
+@keyframes floating
+	0%
+		filter: drop-shadow(0 0.4rem 0.5rem rgba(0, 0, 0, 0.8))
+		transform: scale(1.03)
+
+	50%
+		filter: drop-shadow(0 0.1rem 0.2rem rgba(0, 0, 0, 0.5))
+		transform: scale(1)
+
+	100%
+		filter: drop-shadow(0 0.4rem 0.5rem rgba(0, 0, 0, 0.8))
+		transform: scale(1.03)

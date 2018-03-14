@@ -4,7 +4,7 @@
 		<div class="inscription__form">
 
 			<div class="inscription__form-header">
-				<a href="index.php"><img src="app/images/logo.png" alt="Logo WeFeed"></a>
+				<a href="index.php"><img class="floating" src="app/images/logo.png" alt="Logo WeFeed"/></a>
 			</div>
 			<?php echo flash('register_success'); ?>
 			<form method="POST" action="index.php?req=inscription">

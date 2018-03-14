@@ -1,27 +1,21 @@
-.search
-	background: url("../../images/user-page-background.jpg")
-	background-attachment: fixed
+.favorites
+	background: url("../../images/favorites-page-background.jpg")
 	background-size: cover
 	background-position: center
+	background-attachment: fixed
 	min-height: 100vh
 	height: auto
 	width: 100%
-	padding-top: 4rem
+	padding: 4rem
 	@include clearfix
 
-	& h1
-		text-align: center
-		color: white
-
-	&__cols
-		padding: 0rem 12rem
-
-
-.article-searched
-	margin: 1rem 0rem
+.article-booked
+	float: left
+	margin: 1rem 1rem
 	background-color: $white
 	border-radius: 3px
 	cursor: pointer
+	width: 15rem
 	overflow: hidden
 	transition: all .25s ease
 	text-overflow: ellipsis
@@ -83,24 +77,3 @@
 
 		&:hover
 			background-color: $color-grey
-
-
-#searchbar
-	width: 60%
-	height: 4rem
-	border-radius: 5px
-	border: none
-	transform: translate(-50%, -50%)
-	position: absolute
-	top: 20%
-	left: 50%
-	font-size: 3rem
-	padding: 2rem
-	color: grey
-	box-shadow: $shadow-dark
-
-.search__results
-	width: 33.33%
-	float: left
-	padding: 2rem
-	margin-top: 10%

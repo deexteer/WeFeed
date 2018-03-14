@@ -9,7 +9,7 @@ function changeBackHeader() {
 }
 
 if(user_apis == 0){
-	$('.newsfeed_container').html('<div class="news__feed-message">Vous n\'avez pas encore ajouté de feed dans votre tableau de bord ... :( Allez vite dans les paramètres pour changer cela !)</div>');
+	$('.newsfeed_container').html('<div class="newsfeed__message"><img class="newsfeed__message-img" src="app/images/nocolumns.png" alt="" /></div>');
 }
 
 for(var j = 0; j < user_apis.length; j++) {
@@ -36,8 +36,8 @@ function makeArequest(api_url, number){
 			var data = ajax.responseText;
 			var parsedJson = JSON.parse(data);
 			var articles = parsedJson.articles;
-			for(var i = 0 ; i<= articles.length; i++) {
 
+			for(var i = 0 ; i<= articles.length; i++) {
 				number = number.toString();
 				$('.newsfeed_number'+number).append("<div class='article'><a target='_blank' href="+articles[i].url+"><img src='"+articles[i].urlToImage+"' width='100%'><div class='article__title'><p>"+articles[i].title+"</p></div><div class='article__preview'><p>"+articles[i].description+"</p></div></a><div class='article__actions'><div class='article__button-like'></div><div class='article__button-fav'></div></div></div>");
 			}
@@ -63,9 +63,10 @@ $(document).on('click',".article__button-fav",function () {
 	});
 });
 
-
-
-
+$('.form__deletecolumns-close').click(function(){
+	$('.popup__background').hide();
+	$('.form__deletecolumns').hide();
+});
 
 $('.newsfeed__delete-button').click(function(){
 	var news_to_del = $(this).parent().parent().attr( 'id' );
@@ -82,7 +83,7 @@ $(document).on('click',".language-selector",function () {
 
 
 if(search_request == 0){
-	$('.newsfeed_container').html('<div class="news__feed-message">Vous n\'avez pas encore ajouté de feed dans votre tableau de bord ... :( Allez vite dans les paramètres pour changer cela !)</div>');
+	console.log("Pas de recherche en cours")
 } else {
 	search_url = "https://newsapi.org/v2/everything?q="+search_request+"&apiKey=83644cf8558f42ea8a7c94bd4385dbbe"
 	var ajax = new XMLHttpRequest();
@@ -93,11 +94,33 @@ if(search_request == 0){
 			var data = ajax.responseText;
 			var parsedJson = JSON.parse(data);
 			var articles = parsedJson.articles;
-			console.log(articles)
 			for(var i = 0 ; i<= articles.length; i++) {
-				
-				$('.search_results').append("<div class='results'>"+articles[i].title+"</div>");
+
+				numcol = (i%3+1);
+
+				numcol = numcol.toString();
+
+				$('.search_col-'+numcol).append("<div class='article-searched'><a target='_blank' href="+articles[i].url+"><img src='"+articles[i].urlToImage+"' width='100%'><div class='article__title'><p>"+articles[i].title+"</p></div><div class='article__preview'><p>"+articles[i].description+"</p></div></a><div class='article__actions'><div class='article__button-like'></div><div class='article__button-fav'></div></div></div>");
 			}
 		}
+	}
+}
+
+if(typeof favorites_apis === 'undefined' || !favorites_apis){
+	console.log("Il y a eu une erreur")
+} else {
+		for(var i = 0 ; i <= 6; i++) {
+
+			$('.bookmarks-'+i).append("<div class='article-searched'><a target='_blank' href="+favorites_apis[i].art_url+"><img src='"+favorites_apis[i].art_urlToImage+"' width='100%'><div class='article__title'><p>"+favorites_apis[i].art_title+"</p></div><div class='article__preview'></div></a></div>");
+	}
+}
+
+console.log(userfavorites_apis)
+if(userfavorites_apis == 0){
+	console.log("Il y a eu une erreur")
+} else {
+	console.log(userfavorites_apis)
+	for (bookmarked of userfavorites_apis) {
+		$('.favorites').append("<div class='article-booked'><a target='_blank' href="+bookmarked.art_url+"><img src='"+bookmarked.art_urlToImage+"' width='100%'><div class='article__title'><p>"+bookmarked.art_title+"</p></div><div class='article__preview'></div></a></div>");
 	}
 }

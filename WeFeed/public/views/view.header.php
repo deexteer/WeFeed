@@ -2,7 +2,7 @@
 
 	<!-- Logo  -->
 	<div class="header__container float-left">
-		<a href="publichome"><img class="header__logo" src="app/images/logo.png" alt="Logo WeFeed"></a>
+		<a href="publichome"><img class="header__logo floating" src="app/images/logo.png" alt="Logo WeFeed"></a>
 	</div>
 
 	<!-- Searchbar -->
@@ -28,10 +28,20 @@
 		<?php if($_GET['req'] == "userhome"): ?>
 			<div class="header__icons float-left"><a href="publichome" ><img src="app/images/icons/home.png" alt="Icone home" /></a></div>
 			<div class="header__icons float-left"><a href="settings" ><img src="app/images/icons/settings.png" alt="Icone settings" /></a></div>
+			<div class="header__icons float-left"><a href="favorites" ><img src="app/images/icons/favorites.png" alt="Icone favoris" /></a></div>
 		<?php endif ?>
 
 		<?php if($_GET['req'] == "settings"): ?>
 			<div class="header__icons float-left"><a href="userhome" ><img src="app/images/icons/dashboard.png" alt="Icone dashboard" /></a></div>
+		<?php endif ?>
+
+		<?php if($_GET['req'] == "search"): ?>
+			<div class="header__icons float-left"><a href="publichome" ><img src="app/images/icons/home.png" alt="Icone home" /></a></div>
+			<div class="header__icons float-left"><a href="userhome" ><img src="app/images/icons/dashboard.png" alt="Icone dashboard" /></a></div>
+		<?php endif ?>
+
+		<?php if($_GET['req'] == "favorites"): ?>
+			<div class="header__icons float-left"><a href="userhome" ><img src="app/images/icons/dashboard.png" alt="Icone userhome" /></a></div>
 		<?php endif ?>
 
 		<div class="header__icons  float-left"><a href="disconnect" ><img src="app/images/icons/logout.png" alt="Icone logout" /></a></div>
@@ -44,17 +54,17 @@
 
 	<?php endif ?>
 
-		<div class="header__icons float-left language-selector">
-			<form class="" action="publichome" method="post">
-				<select name="lang" onchange="this.form.submit()">
-
-					<option></option>
-					<option value="fr">Francais</option>
-					<option value="en">Anglais</option>
-					<option value="bl">Bulgare</option>
-				</select>
-			</form>
-		</div>
+	<!-- Selection de la langue -->
+	<div class="header__icons  float-left">
+		<form class="form__lang" action="publichome" method="post" >
+			<select class="form__select" name="lang" onchange="this.form.submit()">
+				<option></option>
+				<option value="fr">Francais</option>
+				<option value="en">Anglais</option>
+				<option value="bl">Bulgare</option>
+			</select>
+		</form>
+	</div>
 
 
 	</div>

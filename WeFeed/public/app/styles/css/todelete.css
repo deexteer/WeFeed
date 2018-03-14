@@ -1,0 +1,16 @@
+.list-items__item {
+    list-style: none;
+    padding: 2%;
+    
+}
+
+.list-items__item:hover {
+    cursor: move;
+    
+}
+
+#list-items {
+    overflow-y: scroll;
+    height: 100px;
+}
+

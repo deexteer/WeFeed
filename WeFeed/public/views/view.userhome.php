@@ -8,6 +8,9 @@
 	<div class="popup__background">
 
 		<div class="form__deletecolumns">
+			<div class="form__deletecolumns-close">
+
+			</div>
 			<form class="delcol" action="userapis" method="post">
 				<input name="coltodel" type="hidden" value="">
 				<div class="popup__delcol">

@@ -3,20 +3,22 @@ session_start();
 
 require "config/config.php";
 require "helpers/session_helper.php";
+
+//Récupère le haut du document html, avec le head et donc les styles
+require "views/view.htmlheader.php";
+
 require "models/mdl.bdd.php";
 require "models/mdl.apis.php";
 require "models/mdl.userapis.php";
 
-require "app/lang/lang.php";
 
-//Récupère le haut du document html, avec le head et donc les styles
-require "views/view.htmlheader.php";
+require "app/lang/lang.php";
 
 if (isset($_SESSION['id'])) {
 
 	if (isset($_GET['req'])) {
 
-		/* Si l'utilisateur est authetifié et qu'il existe un parametre get */
+		/* Si l'utilisateur est authentifié et qu'il existe un parametre get */
 		switch ($_GET['req']) {
 			case 'publichome':
 				require "controllers/ctrl.publichome.php";
@@ -41,6 +43,10 @@ if (isset($_SESSION['id'])) {
 
 			case 'search':
 				require "controllers/ctrl.search.php";
+				break;
+
+			case 'favorites':
+				require "controllers/ctrl.favorites.php";
 				break;
 
 			case 'disconnect':
@@ -85,6 +91,10 @@ if (isset($_SESSION['id'])) {
 				require "controllers/ctrl.inscription.php";
 				break;
 
+			case 'search':
+				require "controllers/ctrl.search.php";
+				break;
+
 			default:
 				header('Location: publichome');
 				exit;
@@ -98,6 +108,7 @@ if (isset($_SESSION['id'])) {
 		exit;
 	}
 }
+
 
 //Récupère le bas du document html, avec le footer et des scripts
 require "views/view.htmlfooter.php";

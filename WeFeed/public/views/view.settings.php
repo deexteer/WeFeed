@@ -10,8 +10,7 @@
 				<p><?= ADD_SOURCES_SELECT ?></p>
 				<select class="panel__input" name="api">
 					<option value=""></option>
-					<?php print_r($result) ?>
-					<?php foreach ($result as $key => $value) {
+					<?php foreach ($result_sources as $key => $value) {
 						echo "<option id=".$value['api_id'].">".$value['api_name']."</option>";
 					} ?>
 

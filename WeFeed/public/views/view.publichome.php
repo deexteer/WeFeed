@@ -18,16 +18,26 @@
 				<h1><?= PUBLICHOME_MOST_POPULAR ?></h1>
 			</div>
 			<div class="row">
-				<div class="col-1-of-2">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<div class="col-1-of-3 bookmarks-1">
+
 				</div>
-				<div class="col-1-of-2">
-					<div class="col-1-of-2">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</div>
-					<div class="col-1-of-2">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</div>
+				<div class="col-1-of-3 bookmarks-2">
+
+				</div>
+				<div class="col-1-of-3 bookmarks-3">
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-1-of-3 bookmarks-4">
+
+				</div>
+				<div class="col-1-of-3 bookmarks-5">
+
+				</div>
+				<div class="col-1-of-3 bookmarks-6">
+
 				</div>
 			</div>
 		</section>
